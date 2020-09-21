@@ -1,0 +1,105 @@
+<div class="background">
+
+    <div class="container">
+        <nav class="navbar navbar-expand-lg ">
+          <a class="navbar-brand">
+            <img src="../../assets/images/libroBlanco.svg" height="50px" width="45px">  
+          </a>  
+          
+          <a class="navbar-brand" style="color: white;" href="#">Biblioteca</a>
+        
+          <div class="links">
+            <a class="spacingMenu" href="userManagement">User Management</a>
+            <a class="spacingMenu" href="#">Books</a>
+            <a class="spacingMenu" href="#">Magazines</a>
+            <a class="spacingMenu" href="#">About</a>
+          </div>
+        </nav>
+    </div>
+</div>
+
+<div class="split left">
+  <table>
+
+    <div class="limiter">
+      <div class="container-table100">
+        <div class="wrap-table100">
+            <div class="table">
+    
+              <div class="row header">
+                <div class="cell">
+                  User
+                </div>
+                <div class="cell">
+                  Name
+                </div>
+                <div class="cell">
+                  Carnet
+                </div>
+                <div class="cell">
+                  Rol
+                </div>
+                <div class="cell">
+                </div>
+                <div class="cell">
+                </div>
+              </div>
+              
+              <div class="row" *ngFor="let emp of managementService.employees">
+                <div class="cell" data-title="User" >
+                  {{emp.user_name}}
+                </div>
+                <div class="cell" data-title="Name">
+                  {{emp.name}}
+                </div>
+                <div class="cell" data-title="Carnet">
+                  {{emp.carnet}}
+                </div>
+                <div class="cell" data-title="Rol">
+                  {{emp.rol}}
+                </div>
+                <div class="cell" data-title="">
+                  <button type="button" class="btn btn-outline-success" (click)="onEdit(emp)">Edit</button>
+                  <child-component [showMePartially]="showVar"></child-component>
+                </div>
+                <div class="cell" data-title="">
+                  <button type="button" class="btn btn-outline-danger" (click)="onDelete(emp._id,managementForm)">Delete</button>
+                </div>
+              </div>
+    
+            </div>
+        </div>
+      </div>
+    </div>
+
+
+  </table>
+
+  <!--===============================================================================================-->	
+  <script src="../../assets/table/vendor/jquery/jquery-3.2.1.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="../../assets/table/vendor/bootstrap/js/popper.js"></script>
+  <script src="../../assets/table/vendor/bootstrap/js/bootstrap.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="../../assets/table/vendor/select2/select2.min.js"></script>
+  <!--===============================================================================================-->
+  <script src="../../assets/table/js/main.js"></script>
+  <script>
+  $('.js-pscroll').each(function(){
+    var ps = new PerfectScrollbar(this);
+
+    $(window).on('resize', function(){
+      ps.update();
+    })
+  });
+  </script>
+</div>
+
+
+
+
+
+
+
+
+

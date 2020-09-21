@@ -1,0 +1,72 @@
+/* You can add global styles to this file, and also import other style files */
+
+html {
+  background-image: url(../src/assets/images/bground.jpg);
+}
+
+.titleDiv {
+    background-color: white;
+    padding-top: 50px;
+    padding-right: 30px;
+    padding-bottom: 40px;
+    padding-left: 80px;
+  
+  }
+  
+  .centeredLogin {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+  }
+  
+  .loginInput {
+    width: 350px;
+    height: 50px;
+    size: 45px;
+  }
+  
+  .square {
+    margin: auto;
+    background-color: white;
+    padding-top: 50px;
+    border: 3px solid #dfc032;
+    border-radius: 25px;
+    width: 400px;
+    height: 600px;  
+  }
+  
+  .split {
+    height: 80%;
+    width: 50%;
+    position: fixed;
+    z-index: 1;
+    top: 23%;
+    overflow-x: hidden;
+    padding-top: 20px;
+  }
+  
+  /* Control the left side */
+  .left {
+    left: 0;
+    background-color: #212529;
+  }
+  
+  /* Control the right side */
+  .right {
+    right: 0;
+    background-color: #212529;
+    
+  }
+  
+  
+  .center {
+    margin: auto;
+    width: 80%;
+    border: 3px solid #dfc032;
+    background-color: white;
+    padding: 1px;
+  }
+
+
